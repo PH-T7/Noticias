@@ -1,0 +1,103 @@
+/* Estilo para o container principal que vai alinhar os cards */
+.container-noticias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Espaço entre os cards */
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+/* Requisito 3: Aplicar CSS para deixar a apresentação visual clara (card)  */
+.card-noticia {
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: #e1e1e1;
+}
+
+.card-noticia h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.info-autor {
+  font-size: 0.8em;
+  color: #666;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.conteudo {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.interacoes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para o contador de curtidas (badge)  */
+.curtidas-badge {
+  background-color: #e7e7e7;
+  padding: 5px 8px;
+  border-radius: 10px;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.secao-comentarios {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.comentario {
+  background-color: #eef;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.comentario-vazio {
+  color: #888;
+  font-style: italic;
+}
+
+.novo-comentario {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.novo-comentario input {
+  flex-grow: 1; /* Faz o input ocupar o espaço disponível */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+body{
+    background-color: #666;
+}

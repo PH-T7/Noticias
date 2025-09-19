@@ -1,0 +1,37 @@
+<div class="container-noticias">
+
+  @for (noticia of noticias; track noticia.titulo) {
+    <div class="card-noticia">
+      <h2>{{ noticia.titulo }}</h2>
+      <div class="info-autor">
+        <p><strong>Autor:</strong> {{ noticia.autor }}</p>
+        <p><strong>Publicado em:</strong> {{ noticia.dataPublicacao }}</p>
+      </div>
+      <p class="conteudo">{{ noticia.conteudo }}</p>
+
+      <div class="interacoes">
+        <button (click)="curtirNoticia(noticia)">Curtir</button>
+        <span class="curtidas-badge">{{ noticia.curtidas }} curtida(s)</span>
+      </div>
+
+      <div class="secao-comentarios">
+        <h4>Comentários</h4>
+        
+        @for (comentario of noticia.comentarios; track $index) {
+          <p class="comentario">{{ comentario }}</p>
+        } @empty {
+          <p class="comentario-vazio">Seja o primeiro a comentar!</p>
+        }
+
+        <div class="novo-comentario">
+          <input 
+            type="text" 
+            [(ngModel)]="noticia.novoComentario" 
+            placeholder="Escreva um comentário...">
+          
+          <button (click)="adicionarComentario(noticia)">Comentar</button>
+        </div>
+      </div>
+    </div>
+  }
+</div>
